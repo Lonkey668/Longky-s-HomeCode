@@ -78,7 +78,7 @@ public class SocketClient implements Runnable {
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode() == KeyEvent.VK_ENTER) {
 					messageArea.append("我：" + textField.getText() + "\n");
-					out.println("媚姐：" +  textField.getText());
+					out.println("佛系少年：" +  textField.getText());
 					textField.setText("");
 				}
 			}

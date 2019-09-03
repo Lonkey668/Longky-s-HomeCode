@@ -68,7 +68,7 @@ public class SocketServer implements Runnable {
 		messageArea = new JTextArea(16,50);
 		messageArea.setText("请等待客户端10秒连接！\n");
 		messageArea.setEditable(false);
-		frame = new JFrame("媚姐");
+		frame = new JFrame("佛系少年");
 		frame.getContentPane().add(textField,BorderLayout.SOUTH);
 		frame.getContentPane().add(new JScrollPane(messageArea),BorderLayout.CENTER);
 		frame.pack();
