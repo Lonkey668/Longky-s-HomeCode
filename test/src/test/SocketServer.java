@@ -26,7 +26,7 @@ import javax.swing.JTextField;
 public class SocketServer implements Runnable {
 
 	ServerSocket server; 
-	String serverAddress;
+	String serverAddress;//服务器地址
 	Socket client;
 	Scanner in;       //文本扫描器输入
 	PrintWriter out;  //打印字符输出流
@@ -109,7 +109,7 @@ public class SocketServer implements Runnable {
 	public void run () {
 		try {
 			client = server.accept();
-			in = new Scanner(client.getInputStream());
+			in = new Scanner(client.getInputStream(),"UTF-8");
 			out = new PrintWriter(client.getOutputStream(),true);
 			while (in.hasNextLine()) {
 				String line = in.nextLine();

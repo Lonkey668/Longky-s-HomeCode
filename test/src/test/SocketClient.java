@@ -102,7 +102,7 @@ public class SocketClient implements Runnable {
 		try {
 			client = new Socket(serverAddress,6669);
 			messageArea.setText("连接服务器成功！\n");
-			in = new Scanner(client.getInputStream()/*,"utf-8"*/);//默认系统字符集utf-8
+			in = new Scanner(client.getInputStream(),"utf-8");//默认系统字符集utf-8
 			out = new PrintWriter(client.getOutputStream(), true);
 			//out.println("连接服务器成功！");
 			while (in.hasNextLine()) {
